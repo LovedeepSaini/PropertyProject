@@ -1,0 +1,117 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+.App {
+  background-color: #fefefe;
+  height: 100vh;
+  width: 100%;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.sd{
+  background-color: #bbb170;
+  overflow: hidden;
+  
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+th{
+  background-color: #50445d;
+  color:#bbb170;;
+}
+tr:nth-child(even){
+  background-color: #bbb170;
+  color:black;
+}
+.center {
+  margin-left: auto;
+  margin-right: auto;
+}
+.align{
+  text-align: center;
+}
+
+table{
+  width: 100%;
+}
+tr, td{
+  align-items: center;
+}
+
+.button-container {
+  display:flex;
+  justify-content: center;
+}
+.btnSize{
+  margin:0 5px;
+}
+
+
+
+.App-link {
+  color: rgb(58, 64, 65);
+}
+.btn-primary {
+ background-color: #50445d;
+ color: #bbb170;
+ border-radius: 12px;
+ padding: 14px;
+ box-shadow: 7px 6px 7px rgba(0, 0, 0, 0.2);
+}
+.title.card-title.h5{
+  color:#bbb170;
+}
+.body1{
+  background-color: #bbb170;
+  color:#50445d
+}
+.div1{
+ border-radius: 10px;
+  background-color: #50445d;
+}
+  
+.align1{
+  display:flex;
+  justify-content: space-between;
+ } 
+ 
+
+.card1{
+  margin:10px;
+ 
+}
+.searchBar{
+  width:30%;
+  margin-right: 10px;
+}
+
+
+
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
