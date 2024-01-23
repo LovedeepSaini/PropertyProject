@@ -248,6 +248,15 @@ function PropertySearch(props) {
                           Change to sold
                         </Button>
 
+                        
+                        <Button
+                      className="primary w-100 mt-4"
+                      variant="info"
+                      onClick={() => handleEdit(property)}
+                    >
+                      Book
+                    </Button>
+
                         <Button
                           className="w-100"
                           variant="warning"
@@ -267,7 +276,9 @@ function PropertySearch(props) {
                         >
                           ReSubmit
                         </Button>
+                        
                       </>
+
                     ) : (
                       ""
                     )}
@@ -277,6 +288,12 @@ function PropertySearch(props) {
                     >
                       Edit
                     </Button>
+
+                  {/* if property.staus = For Sale then new booking can be made */}
+
+                 
+
+                
                   </>
                 </Card.Text>
               </Card.Body>
