@@ -23,12 +23,12 @@ return (
           
         </NavLink>
 
-        <ul className={click ? "nav-menu active" : "nav-menu"}>
-        <li className="nav-item">
+        <ul className={click ? "nav-menu " : "nav-menu"}>
+        <li >
             <NavLink
               exact
               to="/Home"
-              activeClassName="active"
+              
               className="nav-links"
               onClick={handleClick}
             >
