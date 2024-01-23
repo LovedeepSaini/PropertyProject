@@ -7,7 +7,7 @@ import Navbar from './components/Navbar';
 import SellerDetails from './components/SellerDetails';
 import 'bootstrap/dist/css/bootstrap.min.css'; 
 import Buyer from "./components/Buyer";
- 
+import Footer from "./components/Footer";
  
 import PropertySearch from "./components/PropertySearch";
 import Home from "./components/Home";
@@ -31,6 +31,7 @@ function App() {
 
 </Routes>
 </div>
+<Footer/>
 </Router>  
 </div>
 </>
