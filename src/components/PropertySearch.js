@@ -257,6 +257,10 @@ function PropertySearch(props) {
                       Book
                     </Button>
 
+                    <div>
+                      &nbsp;
+                    </div>
+
                         <Button
                           className="w-100"
                           variant="warning"
