@@ -1,14 +1,16 @@
 import { BrowserRouter as Router,  Route, Routes } from "react-router-dom";
-import logo from './logo.svg';
+
 import './App.css';
-import Sellers from './components/Sellers';
+
 import GetSellers from './components/GetSellers';
 import Navbar from './components/Navbar';
-import DeleteSellers from './components/DeleteSellers';
+import SellerDetails from './components/SellerDetails';
 import 'bootstrap/dist/css/bootstrap.min.css'; 
 import Buyer from "./components/Buyer";
-import DeleteBuyer from "./components/DeleteBuyer";
-import Property from "./components/Property";
+
+
+import PropertySearch from "./components/PropertySearch";
+import Home from "./components/Home";
 
 function App() {
   return (
@@ -21,12 +23,15 @@ function App() {
         
         <div className="pages">
           <Routes>
+            <Route path= "/home" element={<Home />}/>
             <Route path="/" element={<GetSellers />} />
             <Route path="/seller" element={<GetSellers />} />
-            <Route path="/seller/:id" element={<DeleteSellers />} />
+            <Route path="/seller/:id" element={<SellerDetails />} />
             <Route path="/buyer" element={<Buyer />} />
-            <Route path="/buyer/:id" element={<DeleteBuyer />} />
-            <Route path="/property" element={<Property />} />
+        
+            <Route path="/property" element={<PropertySearch />} />
+            <Route path="/propertysearch" element={<PropertySearch />} />
+          
           
             
            </Routes>

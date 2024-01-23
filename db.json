@@ -59,7 +59,7 @@
       "bathroom": 1,
       "garden": 0,
       "sellerId": 1,
-      "status": "SOLD",
+      "status": "FOR SALE",
       "buyerId": 3
     },
     {
@@ -72,7 +72,7 @@
       "bathroom": 1,
       "garden": 0,
       "sellerId": 1,
-      "status": "SOLD",
+      "status": "FOR SALE",
       "buyerId": 3
     },
     {
@@ -98,6 +98,38 @@
       "sellerId": 4,
       "status": "SOLD",
       "id": 4
+    },
+    {
+      "address": "23 rfrfgfdg",
+      "postcode": "eh45 ff",
+      "price": "1200000",
+      "bedroom": "1",
+      "bathroom": "1",
+      "garden": "1",
+      "type": "SEMI",
+      "status": "FOR SALE",
+      "sellerID": "1",
+      "image": {
+        "id": 7,
+        "url": "https://images.pexels.com/photos/280222/pexels-photo-280222.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+      },
+      "id": 5
+    },
+    {
+      "address": "23 rfrfgfdg",
+      "postcode": "eh45 ff",
+      "price": "120000",
+      "bedroom": "1",
+      "bathroom": "1",
+      "garden": "1",
+      "type": "SEMI",
+      "status": "FOR SALE",
+      "sellerID": "8",
+      "image": {
+        "id": 6,
+        "url": "https://images.pexels.com/photos/210617/pexels-photo-210617.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+      },
+      "id": 6
     }
   ],
   "buyer": [
