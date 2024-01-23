@@ -214,11 +214,7 @@ function PropertySearch(props) {
             <Card className="">
               <Card.Body className="div1">
                 <Card.Title className="title">
-                  <img
-                    alt="Img"
-                    className="img-fluid object-cover"
-                    src={property.image.url}
-                  />
+              
                 </Card.Title>
                 <Card.Text className="body1">
                   <>
