@@ -72,7 +72,7 @@
       "bathroom": 1,
       "garden": 0,
       "sellerId": 1,
-      "status": "SOLD",
+      "status": "FOR SALE",
       "buyerId": 3
     },
     {
@@ -84,7 +84,7 @@
       "bathroom": "1",
       "garden": "1",
       "sellerId": 3,
-      "status": "FOR SALE",
+      "status": "SOLD",
       "id": 3
     },
     {
@@ -96,7 +96,7 @@
       "bathroom": 3,
       "garden": 1,
       "sellerId": 4,
-      "status": "FOR SALE",
+      "status": "SOLD",
       "id": 4
     }
   ],

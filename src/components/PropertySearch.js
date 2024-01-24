@@ -17,6 +17,13 @@ function PropertySearch(props) {
   const [result, setResult] = useState([]);
   let [editPropertyDetails, setEditPropertyDetails] = useState([]);
 
+  const [bookingData, setBookingData] = useState({
+    buyer: "",
+    property: "",
+    date: "",
+  });
+  
+
   const searchHandler = (searchCriteria) => {
     setResult(
       result.filter(
@@ -34,7 +41,6 @@ function PropertySearch(props) {
 
   useEffect(() => {
     fetch("http://localhost:3001/property")
-      // get the JSON content from the response
       .then((response) => {
         if (!response.ok) {
           alert("An error has occurred.  Unable to load Properties data");
@@ -44,16 +50,50 @@ function PropertySearch(props) {
       .then((result) => {
         setResult(result);
 
-        // console.log(JSON.stringify(properties, null, 2));
       })
       .catch((error) => {
         window.alert("An error has occurred");
       });
   }, []);
 
+  const handleBookingProperty = () => {
+    const { buyer, property, date } = bookingData;
+  
+    if (!buyer || !property || !date) {
+      alert("Please fill in all the required fields.");
+      return;
+    }
+  
+    
+    fetch("http://localhost:3001/booking", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        buyer,
+        property,
+        time: new Date(date).toISOString(),
+      }),
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        
+        updateProperties();
+        
+        setBookingShow(false);
+      })
+      .catch((error) => {
+        console.error("Error adding booking:", error);
+        
+        alert("An error occurred while booking the property.");
+      });
+  };
+  
+
   const updateProperties = () => {
     fetch("http://localhost:3001/property")
-      // get the JSON content from the response
+     
       .then((response) => {
         if (!response.ok) {
           alert("An error has occurred.  Unable to load Properties data");
@@ -63,7 +103,6 @@ function PropertySearch(props) {
       .then((result) => {
         setResult(result);
 
-        // console.log(JSON.stringify(properties, null, 2));
       })
       .catch((error) => {
         window.alert("An error has occurred");
@@ -226,29 +265,36 @@ const handleBooking = () => {
     {/* Example: */}
     <Form>
     <Form.Label>Buyer</Form.Label>
-                <Form.Control
-                  id="buyer"
-                  type="text"
-                  placeholder="enter the buyer name"
-                />
-                <Form.Label>Property</Form.Label>
-                <Form.Control
-                  id="property"
-                  type="text"
-                  placeholder="enter the property address"
-                />
-                 <Form.Label>Date and Time</Form.Label>
-                <Form.Control
-                  id="date"
-                  type="date" 
-                />
+<Form.Control
+  id="buyer"
+  type="number"
+  placeholder="enter the buyer id"
+  value={bookingData.buyer}
+  onChange={(e) => setBookingData({ ...bookingData, buyer: e.target.value })}
+/>
+<Form.Label>Property</Form.Label>
+<Form.Control
+  id="property"
+  type="number"
+  placeholder="enter the property id"
+  value={bookingData.property}
+  onChange={(e) => setBookingData({ ...bookingData, property: e.target.value })}
+/>
+<Form.Label>Date and Time</Form.Label>
+<Form.Control
+  id="date"
+  type="date"
+  value={bookingData.date}
+  onChange={(e) => setBookingData({ ...bookingData, date: e.target.value })}
+/>
+
     </Form>
   </Modal.Body>
   <Modal.Footer>
     <Button variant="secondary" onClick={handleBookingClose}>
       Close
     </Button>
-    <Button variant="primary" onClick={handleBooking}>
+    <Button variant="primary" onClick={handleBookingProperty}>
       Book Property
     </Button>
   </Modal.Footer>
