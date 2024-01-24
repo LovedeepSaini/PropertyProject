@@ -258,9 +258,6 @@ const handleBooking = () => {
 </Modal>
       </div>
 
-
-
-  
       <Row className="pt-4">
         {result.map((property) => (
           <Col key={property.id} className="pb-4" sm={6}>
