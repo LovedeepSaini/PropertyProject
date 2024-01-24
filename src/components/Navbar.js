@@ -5,6 +5,7 @@ import "./Navbar.css";
 import {  HamburgetMenuClose, HamburgetMenuOpen } from "./Icons";
 import { faBriefcase } from '@fortawesome/free-solid-svg-icons';
 import { faUsers } from '@fortawesome/free-solid-svg-icons';
+import { faPen } from '@fortawesome/free-solid-svg-icons';
 import { faBuilding } from '@fortawesome/free-solid-svg-icons';
 import { faHome } from '@fortawesome/free-solid-svg-icons';
 
@@ -66,6 +67,18 @@ function NavBar() {
                 onClick={handleClick}
               >
                 <FontAwesomeIcon icon={faBuilding} /> Property 
+              </NavLink>
+            </li>
+
+            <li className="nav-item">
+              <NavLink
+                exact
+                to="/booking"
+                activeClassName="active"
+                className="nav-links"
+                onClick={handleClick}
+              >
+                <FontAwesomeIcon icon={faPen} /> Bookings 
               </NavLink>
             </li>
           

@@ -11,6 +11,7 @@ import Footer from "./components/Footer";
  
 import PropertySearch from "./components/PropertySearch";
 import Home from "./components/Home";
+import Bookings from "./components/Booking";
  
 function App() {
   return (
@@ -28,7 +29,7 @@ function App() {
 <Route path="/buyer" element={<Buyer />} />
 <Route path="/property" element={<PropertySearch />} />
 <Route path="/propertysearch" element={<PropertySearch />} />
-
+<Route path="/booking" element={<Bookings/>} />
 </Routes>
 </div>
 <Footer/>
