@@ -308,7 +308,7 @@ const handleBooking = () => {
         {result.map((property) => (
           <Col key={property.id} className="pb-4" sm={6}>
             <Card className="">
-            <Card.Img variant="top" src={image} />
+            <Card.Img variant="top" src={image} style={{ filter: property.status === 'SOLD' ? 'grayscale(100%)' : 'none' }} />
               <Card.Body className="div1">
                 <Card.Title className="title">
               
