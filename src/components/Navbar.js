@@ -18,7 +18,7 @@ function NavBar() {
     <>
       <nav className="navbar navbar-expand-sm sticky-top">
         <div className="container-fluid">
-          <NavLink exact to="/" className="nav-logo ">
+          <NavLink exact to="/Home" className="nav-logo ">
             <span><FontAwesomeIcon icon={faHome} size ="2x" />QA Properties</span>
             {/* <i className="fas fa-code"></i> */}
             
