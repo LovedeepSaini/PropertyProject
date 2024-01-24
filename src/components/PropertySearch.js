@@ -13,6 +13,7 @@ function PropertySearch(props) {
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
+  const [bookingShow, setBookingShow] = useState(false);
   const [result, setResult] = useState([]);
   let [editPropertyDetails, setEditPropertyDetails] = useState([]);
 
@@ -84,6 +85,13 @@ function PropertySearch(props) {
   };
   console.log(editPropertyDetails);
 
+  const handleBookingClose = () => setBookingShow(false);
+
+const handleBooking = () => {
+  setBookingShow(true);
+};
+
+
   const updateEditProperties = () => {
     let property = {
       price: document.getElementById("price1").value,
@@ -119,7 +127,7 @@ function PropertySearch(props) {
       />
 
       <div className="container-fluid">
-        {/* Bootstrap modal to add new Seller */}
+        {/* Bootstrap modal to edit property */}
 
         <Modal show={show} onHide={handleClose}>
           <Modal.Header closeButton>
@@ -207,7 +215,33 @@ function PropertySearch(props) {
             </Button>
           </Modal.Footer>
         </Modal>
+
+
+        <Modal show={bookingShow} onHide={handleBookingClose}>
+  <Modal.Header closeButton>
+    <Modal.Title>Book Property</Modal.Title>
+  </Modal.Header>
+  <Modal.Body>
+    {/* Add your booking form or content here */}
+    {/* Example: */}
+    <Form>
+      {/* Booking form fields */}
+    </Form>
+  </Modal.Body>
+  <Modal.Footer>
+    <Button variant="secondary" onClick={handleBookingClose}>
+      Close
+    </Button>
+    <Button variant="primary" onClick={handleBooking}>
+      Book Property
+    </Button>
+  </Modal.Footer>
+</Modal>
       </div>
+
+
+
+  
       <Row className="pt-4">
         {result.map((property) => (
           <Col key={property.id} className="pb-4" sm={6}>
@@ -252,7 +286,7 @@ function PropertySearch(props) {
                         <Button
                       className="primary w-100 mt-4"
                       variant="info"
-                      onClick={() => handleEdit(property)}
+                      onClick={() => handleBooking()}
                     >
                       Book
                     </Button>
