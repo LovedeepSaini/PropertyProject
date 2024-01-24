@@ -225,7 +225,23 @@ const handleBooking = () => {
     {/* Add your booking form or content here */}
     {/* Example: */}
     <Form>
-      {/* Booking form fields */}
+    <Form.Label>Buyer</Form.Label>
+                <Form.Control
+                  id="buyer"
+                  type="text"
+                  placeholder="enter the buyer name"
+                />
+                <Form.Label>Property</Form.Label>
+                <Form.Control
+                  id="property"
+                  type="text"
+                  placeholder="enter the property address"
+                />
+                 <Form.Label>Date and Time</Form.Label>
+                <Form.Control
+                  id="date"
+                  type="date" 
+                />
     </Form>
   </Modal.Body>
   <Modal.Footer>
@@ -330,8 +346,6 @@ const handleBooking = () => {
                   {/* if property.staus = For Sale then new booking can be made */}
 
                  
-
-                
                   </>
                 </Card.Text>
               </Card.Body>
