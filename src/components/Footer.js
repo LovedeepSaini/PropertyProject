@@ -5,10 +5,10 @@ import{faInstagram, faFacebook, faLinkedin , faTwitter} from "@fortawesome/free-
 const Footer = () => {
     return ( 
         <>
-<footer class="text-center text-lg-start bg-body-info text-muted">
+<footer class="text-center text-lg-start bg-body-info text-muted" style={{ backgroundColor: "rgb(241, 235, 235)" }}>
 <section class="d-flex justify-content-between p-4 border-bottom">
   <div class="d-flex align-items-center">
-    <span class="me-3">Connect with us on socials:</span>
+    <span class="me-3"  style={{ color: "#313048" }}>Connect with us on socials:</span>
 
     <a href="" class="me-4 text-reset fa-lg">
       <FontAwesomeIcon icon={faInstagram} style={{ color: "#bb06e0" }} />
@@ -30,11 +30,11 @@ const Footer = () => {
     <div class="container text-center text-md-start mt-5">
       <div class="row mt-3">
         <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
-          <h6 class="text-uppercase fw-bold mb-2">
-          Rook
+          <h6 class="text-uppercase fw-bold mb-2" style={{ color: "#313048" }}>
+          QA
           </h6>
-          <h6 class="text-uppercase fw-bold mb-2">
-         Residences
+          <h6 class="text-uppercase fw-bold mb-2" style={{ color: "#313048" }}>
+         Properties
           </h6>
           <p>
             Check out our helpful links and how we can help secure your next home.
@@ -42,7 +42,7 @@ const Footer = () => {
         </div>
 
         <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
-          <h6 class="text-uppercase fw-bold mb-4">
+          <h6 class="text-uppercase fw-bold mb-4" style={{ color: "#313048" }}>
             Useful links
           </h6>
           <p>
@@ -54,15 +54,15 @@ const Footer = () => {
             <a href="#!" class="text-reset">About Us</a>
           </p>
           <p>
-            <a href="#!" class="text-reset">Help</a>
+            <a href="#!" class="text-reset text-white">Help</a>
           </p>
         </div>
 
         <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
-          <h6 class="text-uppercase fw-bold mb-4">Contact Us</h6>
-          <p class="fasme-3"> <FontAwesomeIcon icon={faMapLocationDot}/> &nbsp;186 Braveheart Lane, Perth, PH8 7LF</p>
+          <h6 class="text-uppercase fw-bold mb-4" style={{ color: "#313048" }} >Contact Us</h6>
+          <p class="fasme-3"> <FontAwesomeIcon icon={faMapLocationDot}/> &nbsp;186 Braveheart Lane, Edinburgh, EH14 7LF</p>
           <p class="fasme-3"> <FontAwesomeIcon icon={faAt}/>&nbsp;
-          RookResidences@chess.com
+          QaProperties@gmail.com
           </p>
           <p class="fasme-3"> <FontAwesomeIcon icon={faPhone}/>&nbsp;01652 864579</p>
         </div>
@@ -70,9 +70,9 @@ const Footer = () => {
     </div>
   </section>
 
-  <div class="text-center p-4">
+  <div class="text-center p-4"  style={{ color: "#313048" }}>
      2023 Copyright:&nbsp;
-    <a class="text-reset fw-bold">RookResidences.com</a>
+    <a class="text-reset fw-bold"  style={{ color: "#313048" }}>Qa Properties.com</a>
   </div>
 </footer>
 
