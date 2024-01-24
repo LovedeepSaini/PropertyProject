@@ -8,6 +8,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPoundSign, faSearch, faBed, faBath , faTree, faMapMarkerAlt, faCheck} from "@fortawesome/free-solid-svg-icons";
 import Modal from "react-bootstrap/Modal";
 import Form from "react-bootstrap/Form";
+import image from './image.jpg';
 
 function PropertySearch(props) {
   const [show, setShow] = useState(false);
@@ -166,6 +167,7 @@ const handleBooking = () => {
       />
 
       <div className="container-fluid">
+      
         {/* Bootstrap modal to edit property */}
 
         <Modal show={show} onHide={handleClose}>
@@ -173,6 +175,7 @@ const handleBooking = () => {
             <Modal.Title>Property</Modal.Title>
           </Modal.Header>
           <Modal.Body>
+          
             <br />
             <Form>
               <Form.Group className="mb-3" controlId="price1">
@@ -305,6 +308,7 @@ const handleBooking = () => {
         {result.map((property) => (
           <Col key={property.id} className="pb-4" sm={6}>
             <Card className="">
+            <Card.Img variant="top" src={image} />
               <Card.Body className="div1">
                 <Card.Title className="title">
               
